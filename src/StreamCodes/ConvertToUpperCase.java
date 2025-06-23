@@ -15,5 +15,4 @@ public class ConvertToUpperCase {
 
 		System.out.println(ans);
 	}
-
 }
