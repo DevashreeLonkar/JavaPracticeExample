@@ -11,11 +11,18 @@ public class StringLengthMap {
 
 	public static void main(String[] args) {
 		List<String> list= Arrays.asList("Java", "Python", "Javascript");
-		
-	Map<String, Integer> ansMap= list.stream().collect(Collectors.toMap(s->s, s->s.length()));
-		
+//		
+//	Map<String, Integer> ansMap= list.stream().collect(Collectors.toMap(s->s, s->s.length()));
+//		
+//
+//	System.out.println(ansMap);
+	
+	 // Frequency of each string using stream
+    Map<String, Long> frequencyMap = list.stream()
+            .collect(Collectors.groupingBy(s -> s, Collectors.counting()));
 
-	System.out.println(ansMap);
+    // Print the result
+  frequencyMap.forEach((k, v) -> System.out.println(k + " : " + v));
 	}
 
 }
