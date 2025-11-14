@@ -16,8 +16,8 @@ public class CharFrequency {
         System.out.println(result);
     }
 
-    public static Map<String, Long> outputWords(String inputString) {
-        return Arrays.stream(inputString.split(""))
+    public static Map<String, Long> outputWords(String input) {
+        return Arrays.stream(input.split(""))
                 .collect(Collectors.groupingBy(x -> x, Collectors.counting()));
     }
 }
